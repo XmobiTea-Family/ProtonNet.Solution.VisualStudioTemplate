@@ -1,3 +1,8 @@
+# [Proton Net Server](https://github.com/XmobiTea-Family/ProtonNet.Solution).
+
+![GitHub release](https://img.shields.io/github/release/XmobiTea-Family/ProtonNet.Solution.svg)
+![License](https://img.shields.io/github/license/XmobiTea-Family/ProtonNet.Solution)
+
 # ProtonNet Visual Studio Template
 
 ## Introduction
