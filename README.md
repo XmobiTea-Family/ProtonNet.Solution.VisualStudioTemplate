@@ -1,61 +1,68 @@
-# [Proton Net Server](https://github.com/XmobiTea-Family/ProtonNet.Solution).
 
+# [Proton Net Server](https://github.com/XmobiTea-Family/ProtonNet.Solution)
 ![GitHub release](https://img.shields.io/github/release/XmobiTea-Family/ProtonNet.Solution.svg)
 ![License](https://img.shields.io/github/license/XmobiTea-Family/ProtonNet.Solution)
+[![GitHub star chart](https://img.shields.io/github/stars/XmobiTea-Family/ProtonNet.Solution?style=social)](https://star-history.com/#XmobiTea-Family/ProtonNet.Solution)
 
-# ProtonNet Visual Studio Template
+# Proton Net Visual Studio Template
+![GitHub release](https://img.shields.io/github/release/XmobiTea-Family/ProtonNet.VisualStudioTemplate.svg)
 
 ## Introduction
-This repository simplifies the creation of:
-1. ProtonNet Server projects.
-2. ProtonNet handler classes.
+This repository helps you quickly set up:
+- Proton Net Server projects.
+- Proton Net handler classes.
 
-## How to Set Up
-1. Download the latest release from the [ProtonNet Visual Studio Template Releases](https://github.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/releases).
-2. Unzip the release, and you will find:
+## How to Setup
+1. Download the latest release from the [Proton Net Visual Studio Template Releases](https://github.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/releases).
+2. Extract the release, and you will find the following:
 
-    ### I. Item Templates:
-        - `Item.XmobiTea.ProtonNet.EventHandler.zip`
-        - `Item.XmobiTea.ProtonNet.ModelEventHandler.zip`
-        - `Item.XmobiTea.ProtonNet.ModelRequestHandler.zip`
-        - `Item.XmobiTea.ProtonNet.RequestHandler.zip`
-        - `Item.XmobiTea.ProtonNet.WebApiController.zip`
+    ### I. ItemTemplates:
+        - `Item.XmobiTea.ProtonNet.EventHandler.[VERSION].zip`
+        - `Item.XmobiTea.ProtonNet.ModelEventHandler.[VERSION].zip`
+        - `Item.XmobiTea.ProtonNet.ModelRequestHandler.[VERSION].zip`
+        - `Item.XmobiTea.ProtonNet.RequestHandler.[VERSION].zip`
+        - `Item.XmobiTea.ProtonNet.WebApiController.[VERSION].zip`
 
-    ### II. Project Templates:
-        - `XmobiTea.ProtonNet.SolutionSocketServer.zip`
-        - `XmobiTea.ProtonNet.SolutionWebApiServer.zip`
+    ### II. ProjectTemplates:
+        - `XmobiTea.ProtonNet.SolutionSocketServer.[VERSION].zip`
+        - `XmobiTea.ProtonNet.SolutionWebApiServer.[VERSION].zip`
 
 3. Copy the templates to the appropriate Visual Studio template folders:
 
+   ![alt text](image/templatesFolder.png)
+
     #### a. For Windows:
-        1. **ItemTemplates:**
+        1. **Item Templates:**
             - Navigate to `C:\Users\[YOUR USER]\Documents\Visual Studio [VERSION]\Templates\ItemTemplates`
             - If there are older versions of these templates, remove them.
             - Copy the Item Templates from section I into this folder.
 
-        2. **ProjectTemplates:**
+        2. **Project Templates:**
             - Navigate to `C:\Users\[YOUR USER]\Documents\Visual Studio [VERSION]\Templates\ProjectTemplates`
             - If there are older versions of these templates, remove them.
             - Copy the Project Templates from section II into this folder.
 
     #### b. For macOS:
-        1. **ItemTemplates:**
+        1. **Item Templates:**
             - Navigate to `~/Documents/Visual Studio [VERSION]/Templates/ItemTemplates/`
             - If there are older versions of these templates, remove them.
             - Copy the Item Templates from section I into this folder.
 
-        2. **ProjectTemplates:**
+        2. **Project Templates:**
             - Navigate to `~/Documents/Visual Studio [VERSION]/Templates/ProjectTemplates/`
             - If there are older versions of these templates, remove them.
             - Copy the Project Templates from section II into this folder.
 
-4. Restart Visual Studio.
-   - When creating a new project, if it appears as shown in the image below, then the Project Templates setup is successful.
-   - ![alt text](image/createNewProject.png)
-   
-   - When adding a new class, if it appears as shown in the image below, then the Item Templates setup is successful.
-   - ![alt text](image/addNewItem.png)
+4. After copying, your folder structure should look like this:
+   ![alt text](image/itemTemplatesFolder.png)
+   ![alt text](image/projectTemplatesFolder.png)
 
-Feel free to let us know if you encounter any issues setting up this Visual Studio Template. We’ll be happy to assist you whenever we’re available.
+5. Restart Visual Studio.
+   - When creating a new project, filter by `Proton Net`. If the templates appear as shown in the image below, the Project Templates have been successfully installed.
+   ![alt text](image/createNewProject.png)
 
-Feel free to let us know if you encounter any issues setting up this Visual Studio Template. We’ll be happy to assist you whenever we’re available. You can reach out to us via email at `changx.develop@gmail.com`. Please include details about the issue and some of your contact information so we can get back to you.
+   - When adding a new class, if the templates appear as shown below, the Item Templates have been successfully installed.
+   ![alt text](image/addNewItem.png)
+
+## Support
+If you run into any issues while setting up this Visual Studio Template, feel free to contact us. We're happy to assist when available. You can reach us at `changx.develop@gmail.com`. Please provide details about the issue and some contact information so we can follow up with you.
