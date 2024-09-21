@@ -12,16 +12,16 @@
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <CreateInPlace>true</CreateInPlace>
-    <Icon>__TemplateIcon.png</Icon>
-    <PreviewImage>__PreviewImage.png</PreviewImage>
+    <Icon>icon.png</Icon>
+    <PreviewImage>icon.png</PreviewImage>
   </TemplateData>
   <TemplateContent>
     <ProjectCollection>
 	    <ProjectTemplateLink ProjectName="$safeprojectname$.Startup" CopyParameters="true">
-        XmobiTea.ProtonNet.Examples.SocketServer.Startup\MyTemplate.vstemplate
+        SocketServer.Startup\MyTemplate.vstemplate
       </ProjectTemplateLink>
       <ProjectTemplateLink ProjectName="$safeprojectname$" CopyParameters="true">
-        XmobiTea.ProtonNet.Examples.SocketServer\MyTemplate.vstemplate
+        SocketServer\MyTemplate.vstemplate
       </ProjectTemplateLink>
     </ProjectCollection>
   </TemplateContent>

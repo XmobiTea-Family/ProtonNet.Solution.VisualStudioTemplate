@@ -1,0 +1,53 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Hidden>true</Hidden>
+    <Name>WebApiServer</Name>
+    <Description>Create a code project for Proton Net WebApiServer</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WebApiServer</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>icon.png</Icon>
+    <PreviewImage>icon.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="WebApiServer.csproj" File="WebApiServer.csproj" ReplaceParameters="true">
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HelloWorldController.cs">HelloWorldController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IndexController.cs">IndexController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecastController.cs">WeatherForecastController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Handlers" TargetFolderName="Handlers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ModelRequestHandler.cs">ModelRequestHandler.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NoModelRequestHandler.cs">NoModelRequestHandler.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecast.cs">WeatherForecast.cs</ProjectItem>
+      </Folder>
+      <Folder Name="web" TargetFolderName="web">
+        <Folder Name="Layouts" TargetFolderName="Layouts">
+          <ProjectItem ReplaceParameters="true" TargetFileName="_Layout.phtml">_Layout.phtml</ProjectItem>
+        </Folder>
+        <Folder Name="Partials" TargetFolderName="Partials">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Footer.phtml">Footer.phtml</ProjectItem>
+        </Folder>
+        <Folder Name="Views" TargetFolderName="Views">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.phtml">Index.phtml</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <ProjectItem ReplaceParameters="true" TargetFileName="favicon.ico">favicon.ico</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="style.css">style.css</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Application.cs">Application.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="log4net.config">log4net.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StartupSettings.json">StartupSettings.json</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

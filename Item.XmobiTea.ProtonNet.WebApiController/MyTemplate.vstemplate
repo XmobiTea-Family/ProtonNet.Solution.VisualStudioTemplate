@@ -5,8 +5,8 @@
     <Description>A WebApiController class for ProtonNet WebApiServer</Description>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>10</SortOrder>
-    <Icon>__TemplateIcon.png</Icon>
-    <PreviewImage>__PreviewImage.png</PreviewImage>
+    <Icon>icon.png</Icon>
+    <PreviewImage>icon.png</PreviewImage>
   </TemplateData>
   <TemplateContent>
     <References />

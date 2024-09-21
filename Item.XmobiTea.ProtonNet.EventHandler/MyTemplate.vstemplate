@@ -5,8 +5,8 @@
     <Description>An EventHandler class for ProtonNet SocketServer</Description>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>10</SortOrder>
-    <Icon>__TemplateIcon.png</Icon>
-    <PreviewImage>__PreviewImage.png</PreviewImage>
+    <Icon>icon.png</Icon>
+    <PreviewImage>icon.png</PreviewImage>
   </TemplateData>
   <TemplateContent>
     <References />
