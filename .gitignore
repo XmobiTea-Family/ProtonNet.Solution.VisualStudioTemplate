@@ -1,4 +1,4 @@
-Windows/Release/
-Windows/ProtonNetServerTemplate/obj/
-Windows/ProtonNetServerTemplate/bin/
-Windows/ProtonNetServerTemplate/.vs/
+Windows/OldVSTemplate/Release/
+Windows/OldVSTemplate/ProtonNetServerTemplate/obj/
+Windows/OldVSTemplate/ProtonNetServerTemplate/bin/
+Windows/OldVSTemplate/ProtonNetServerTemplate/.vs/
