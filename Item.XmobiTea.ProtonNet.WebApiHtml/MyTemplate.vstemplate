@@ -1,8 +1,8 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
     <DefaultName>Name</DefaultName>
-    <Name>Proton Net - RequestHandler class with RequestModel</Name>
-    <Description>A RequestHandler class with RequestModel for Proton Net Both WebApiServer and SocketServer</Description>
+    <Name>Proton Net - WebApiController html file to render html</Name>
+    <Description>A WebApiController html file for Proton Net WebApiServer</Description>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>10</SortOrder>
     <Icon>icon.png</Icon>
@@ -10,6 +10,6 @@
   </TemplateData>
   <TemplateContent>
     <References />
-    <ProjectItem SubType="" TargetFileName="$fileinputname$RequestHandler.cs" ReplaceParameters="true">TemplateRequestHandler.cs</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.phtml" ReplaceParameters="true">Template.phtml</ProjectItem>
   </TemplateContent>
 </VSTemplate>

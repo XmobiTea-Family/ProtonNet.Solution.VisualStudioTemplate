@@ -1,1 +1,4 @@
 Release/
+ProtonNetServerTemplate/obj/
+ProtonNetServerTemplate/bin/
+ProtonNetServerTemplate/.vs/
