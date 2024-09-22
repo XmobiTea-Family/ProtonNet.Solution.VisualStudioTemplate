@@ -1,66 +1,24 @@
 ﻿using $safeprojectname$.Utils;
 using System;
 using System.Reflection;
+using XmobiTea.ProtonNet.Control.Helper;
 using XmobiTea.ProtonNet.Server.WebApi;
 
 namespace $safeprojectname$
 {
     class Program
     {
-        static void Main(string[] args)
+        private const string AssemblyName = "$ext_safeprojectname$";
+        private const string StartupSettingsFilePath = "./StartupSettings.json";
+
+        private static void Main(string[] args)
         {
-            var assembly = Assembly.Load("$ext_safeprojectname$");
+            var assembly = Assembly.Load(AssemblyName);
 
-            var sessionConfig = SessionConfigSettings.NewBuilder()
-                .SetAcceptorBacklog(1024)
-                .SetDualMode(false)
-                .SetKeepAlive(true)
-                .SetTcpKeepAliveInterval(0)
-                .SetTcpKeepAliveRetryCount(0)
-                .SetTcpKeepAliveTime(5)
-                .SetNoDelay(true)
-                .SetReuseAddress(false)
-                .SetExclusiveAddressUse(false)
-                .SetReceiveBufferLimit(0)
-                .SetReceiveBufferCapacity(8192)
-                .SetSendBufferLimit(0)
-                .SetSendBufferCapacity(8192)
-                .Build();
+            var startupSettingsReader = new StartupSettingsReader();
+            var webApiStartupSettings = startupSettingsReader.LoadWebApiStartupSettings(StartupSettingsFilePath);
 
-            var sslConfig = SslConfigSettings.NewBuilder()
-                .SetEnable(false)
-                .SetPort(22203)
-                .SetCerFilePath(string.Empty)
-                .SetCerPassword(null)
-                .Build();
-
-            var httpServer = HttpServerSettings.NewBuilder()
-                .SetAddress("0.0.0.0")
-                .SetPort(22202)
-                .SetEnable(true)
-                .SetSessionConfig(sessionConfig)
-                .SetSslConfig(sslConfig)
-                .Build();
-
-            var threadPoolSize = ThreadPoolSizeSettings.NewBuilder()
-                .SetOtherFiber(2)
-                .SetReceivedFiber(12)
-                .Build();
-
-            var authToken = AuthTokenSettings.NewBuilder()
-                .SetPassword("123456")
-                .Build();
-
-            var startupSettings = StartupSettings.NewBuilder()
-                .SetName("$ext_safeprojectname$")
-                .SetMaxPendingRequest(10000)
-                .SetMaxSessionPendingRequest(100)
-                .SetMaxSessionRequestPerSecond(50)
-                .SetHttpServer(httpServer)
-                .SetThreadPoolSize(threadPoolSize)
-                .SetAuthToken(authToken)
-                .Build();
-
+            var startupSettings = GenerateStartupSettingsFrom(webApiStartupSettings);
             var serverEntry = DebugWebApiServerEntry.NewBuilder()
                 .SetStartupSettings(startupSettings)
                 .Build();
@@ -68,11 +26,72 @@ namespace $safeprojectname$
             var server = serverEntry.GetServer();
             server.Start();
 
-            BrowserSupport.Open($"http://127.0.0.1:{httpServer.Port}");
+            BrowserSupport.Open($"http://127.0.0.1:{startupSettings.HttpServer.Port}");
 
             Console.ReadLine();
 
         }
+
+        /// <summary>
+        /// Generates Web API server startup settings from the provided configuration.
+        /// </summary>
+        /// <param name="webApiStartupSettings">Configuration for the Web API server.</param>
+        /// <returns>The generated startup settings for the Web API server.</returns>
+        private static StartupSettings GenerateStartupSettingsFrom(XmobiTea.ProtonNet.Control.Helper.Models.WebApiStartupSettings webApiStartupSettings)
+        {
+            var sessionConfig = SessionConfigSettings.NewBuilder()
+                .SetAcceptorBacklog(webApiStartupSettings.HttpServer.SessionConfig.AcceptorBacklog)
+                .SetDualMode(webApiStartupSettings.HttpServer.SessionConfig.DualMode)
+                .SetKeepAlive(webApiStartupSettings.HttpServer.SessionConfig.KeepAlive)
+                .SetTcpKeepAliveTime(webApiStartupSettings.HttpServer.SessionConfig.TcpKeepAliveTime)
+                .SetTcpKeepAliveInterval(webApiStartupSettings.HttpServer.SessionConfig.TcpKeepAliveInterval)
+                .SetTcpKeepAliveRetryCount(webApiStartupSettings.HttpServer.SessionConfig.TcpKeepAliveRetryCount)
+                .SetNoDelay(webApiStartupSettings.HttpServer.SessionConfig.NoDelay)
+                .SetReuseAddress(webApiStartupSettings.HttpServer.SessionConfig.ReuseAddress)
+                .SetExclusiveAddressUse(webApiStartupSettings.HttpServer.SessionConfig.ExclusiveAddressUse)
+                .SetReceiveBufferLimit(webApiStartupSettings.HttpServer.SessionConfig.ReceiveBufferLimit)
+                .SetReceiveBufferCapacity(webApiStartupSettings.HttpServer.SessionConfig.ReceiveBufferCapacity)
+                .SetSendBufferLimit(webApiStartupSettings.HttpServer.SessionConfig.SendBufferLimit)
+                .SetSendBufferCapacity(webApiStartupSettings.HttpServer.SessionConfig.SendBufferCapacity)
+                .Build();
+
+            var sslConfig = SslConfigSettings.NewBuilder()
+                .SetEnable(webApiStartupSettings.HttpServer.SslConfig.Enable)
+                .SetPort(webApiStartupSettings.HttpServer.SslConfig.Port)
+                .SetCertFilePath(webApiStartupSettings.HttpServer.SslConfig.CertFilePath)
+                .SetCertPassword(webApiStartupSettings.HttpServer.SslConfig.CertPassword)
+                .Build();
+
+            var httpServer = HttpServerSettings.NewBuilder()
+                .SetAddress(webApiStartupSettings.HttpServer.Address)
+                .SetPort(webApiStartupSettings.HttpServer.Port)
+                .SetEnable(webApiStartupSettings.HttpServer.Enable)
+                .SetSessionConfig(sessionConfig)
+                .SetSslConfig(sslConfig)
+                .Build();
+
+            var threadPoolSize = ThreadPoolSizeSettings.NewBuilder()
+                .SetOtherFiber(webApiStartupSettings.ThreadPoolSize.OtherFiber)
+                .SetReceivedFiber(webApiStartupSettings.ThreadPoolSize.ReceivedFiber)
+                .Build();
+
+            var authToken = AuthTokenSettings.NewBuilder()
+                .SetPassword(webApiStartupSettings.AuthToken.Password)
+                .Build();
+
+            var startupSettings = StartupSettings.NewBuilder()
+                .SetName(webApiStartupSettings.Name)
+                .SetMaxPendingRequest(webApiStartupSettings.MaxPendingRequest)
+                .SetMaxSessionPendingRequest(webApiStartupSettings.MaxSessionPendingRequest)
+                .SetMaxSessionRequestPerSecond(webApiStartupSettings.MaxSessionRequestPerSecond)
+                .SetHttpServer(httpServer)
+                .SetThreadPoolSize(threadPoolSize)
+                .SetAuthToken(authToken)
+                .Build();
+
+            return startupSettings;
+        }
+
     }
 
 }

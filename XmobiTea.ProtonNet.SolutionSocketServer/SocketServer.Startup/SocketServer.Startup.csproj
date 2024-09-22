@@ -9,4 +9,8 @@
 		<ProjectReference Include="..\$ext_safeprojectname$\$ext_safeprojectname$.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="XmobiTea.ProtonNet.Control.Helper" Version="1.0.3" />
+	</ItemGroup>
+	
 </Project>

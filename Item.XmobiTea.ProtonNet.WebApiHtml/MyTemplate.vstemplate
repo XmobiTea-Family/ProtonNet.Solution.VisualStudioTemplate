@@ -1,8 +1,8 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
     <DefaultName>Name</DefaultName>
-    <Name>ProtonNet - WebApiController html file to render html</Name>
-    <Description>A WebApiController html file for ProtonNet WebApiServer</Description>
+    <Name>Proton Net - WebApiController html file to render html</Name>
+    <Description>A WebApiController html file for Proton Net WebApiServer</Description>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>10</SortOrder>
     <Icon>icon.png</Icon>

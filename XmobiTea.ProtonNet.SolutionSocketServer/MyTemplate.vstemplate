@@ -1,15 +1,15 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
   <TemplateData>
-    <Name>ProtonNet - Solution SocketServer</Name>
-    <Description>Create a solution of ProtonNet SocketServer, include startup debug project and code project</Description>
+    <Name>Proton Net - Solution SocketServer</Name>
+    <Description>Create a solution of Proton Net SocketServer, include startup debug project and code project</Description>
     <ProjectType>CSharp</ProjectType>
-    <ProjectSubType>
-    </ProjectSubType>
+    <ProjectSubType></ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>ProtonNetSocketServer</DefaultName>
+    <DefaultName>ProtonNetSocketServerApplication</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
+    <EnableEditOfLocationField>true</EnableEditOfLocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <CreateInPlace>true</CreateInPlace>
     <Icon>icon.png</Icon>

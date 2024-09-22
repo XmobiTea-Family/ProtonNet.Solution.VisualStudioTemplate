@@ -3,13 +3,13 @@
     <Name>Proton Net - Solution WebApiServer</Name>
     <Description>Create a solution of Proton Net WebApiServer, include startup debug project and code project</Description>
     <ProjectType>CSharp</ProjectType>
-    <ProjectSubType>
-    </ProjectSubType>
+    <ProjectSubType></ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>ProtonNetWebApiServer</DefaultName>
+    <DefaultName>ProtonNetWebApiServerApplication</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
+    <EnableEditOfLocationField>true</EnableEditOfLocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <CreateInPlace>true</CreateInPlace>
     <Icon>icon.png</Icon>
