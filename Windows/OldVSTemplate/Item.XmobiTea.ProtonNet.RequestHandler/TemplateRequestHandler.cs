@@ -13,6 +13,8 @@ namespace $rootnamespace$
 
         public override async Task<OperationResponse> Handle(OperationRequest operationRequest, SendParameters sendParameters, IUserPeer userPeer, ISession session)
         {
+            // Handle and return the operation response with the provided operation request
+
             return new OperationResponse(operationRequest.OperationCode)
             {
                 ReturnCode = ReturnCode.OperationInvalid,

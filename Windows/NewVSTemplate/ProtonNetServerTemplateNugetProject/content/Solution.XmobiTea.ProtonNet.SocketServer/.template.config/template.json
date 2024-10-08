@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "XmobiTea Family",
+    "classifications": [
+        "ProtonNet"
+    ],
+    "identity": "Solution.XmobiTea.ProtonNet.SocketServer",
+    "name": "SocketServer Solution",
+    "description": "Create a solution of ProtonNet SocketServer, include startup debug project and code project.",
+    "shortName": "protonnet-socket",
+    "defaultName": "SocketServerApplication",
+    "tags": {
+        "language": "C#",
+        "type": "solution"
+    },
+    "sourceName": "__Server__",
+    "preferNameDirectory": true,
+    "guids": [
+        "431AD0D8-15BF-4010-A236-D10F1EEF9046",
+        "A31705D4-94BA-42C2-8440-F6C23EFC1568"
+    ],
+    "sources": [
+        {
+            "source": "./.vscode/",
+            "target": "./../.vscode/",
+            "include": [
+                "**/*"
+            ]
+        },
+        {
+            "source": "./__Server__.Startup/",
+            "target": "./__Server__.Startup/",
+            "include": [
+                "**/*"
+            ]
+        },
+        {
+            "source": "./__Server__/",
+            "target": "./__Server__/",
+            "include": [
+                "**/*"
+            ]
+        }
+    ],
+    "symbols": {
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net46",
+                    "description": ".NET Framework 4.6"
+                },
+                {
+                    "choice": "net461",
+                    "description": ".NET Framework 4.6.1"
+                },
+                {
+                    "choice": "net462",
+                    "description": ".NET Framework 4.6.2"
+                },
+                {
+                    "choice": "net47",
+                    "description": ".NET Framework 4.7"
+                },
+                {
+                    "choice": "net471",
+                    "description": ".NET Framework 4.7.1"
+                },
+                {
+                    "choice": "net472",
+                    "description": ".NET Framework 4.7.2"
+                },
+                {
+                    "choice": "net48",
+                    "description": ".NET Framework 4.8"
+                },
+                {
+                    "choice": "net481",
+                    "description": ".NET Framework 4.8.1"
+                },
+                {
+                    "choice": "netcoreapp3.1",
+                    "description": ".NET Core 3.1"
+                },
+                {
+                    "choice": "net6.0",
+                    "description": ".NET 6.0"
+                },
+                {
+                    "choice": "net8.0",
+                    "description": ".NET 8.0"
+                }
+            ],
+            "replaces": "__TargetFramework__",
+            "defaultValue": "net8.0"
+        },
+        "RandomAuthTokenPassword": {
+            "type": "generated",
+            "generator": "guid",
+            "replaces": "__RandomAuthTokenGuid__"
+        },
+        "ProtonNetVersion": {
+            "type": "parameter",
+            "datatype": "text",
+            "description": "Enter the ProtonNet version",
+            "defaultValue": "1.0.4",
+            "replaces": "__ProtonNetVersion__"
+        }
+    },
+    "primaryOutputs": [
+        {
+            "path": "__ServerSolution__.sln"
+        }
+    ]
+}

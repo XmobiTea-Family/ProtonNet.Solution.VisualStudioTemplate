@@ -1,0 +1,7 @@
+{
+    "csharp.debug.logging.moduleLoad": false,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true
+    }
+}

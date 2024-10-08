@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav {
+    background-color: #222;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.container p {
+    line-height: 1.6;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    flex: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 {
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    color: #3498db; /* Màu sắc của liên kết */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định */
+    font-weight: bold; /* Chữ in đậm */
+    padding: 10px 20px; /* Thêm khoảng cách bên trong */
+    border-radius: 5px; /* Bo góc */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi khi hover */
+}
+
+a:hover {
+    background-color: #3498db; /* Thay đổi nền khi hover */
+    color: white; /* Thay đổi màu chữ khi hover */
+    text-decoration: none; /* Vẫn giữ việc loại bỏ gạch chân khi hover */
+}
+
+a:active {
+    background-color: #2980b9; /* Nền khi liên kết được nhấp vào */
+}
+
+a:focus {
+    outline: none; /* Loại bỏ viền focus mặc định */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Thêm hiệu ứng bóng khi focus */
+}

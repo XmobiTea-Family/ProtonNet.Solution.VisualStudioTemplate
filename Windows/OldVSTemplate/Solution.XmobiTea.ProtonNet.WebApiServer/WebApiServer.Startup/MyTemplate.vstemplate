@@ -1,0 +1,27 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Hidden>true</Hidden>
+    <Name>WebApiServer.Startup</Name>
+    <Description>Create a debug startup project for ProtonNet WebApiServer</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WebApiServer.Startup</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>icon.png</Icon>
+    <PreviewImage>icon.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="WebApiServer.Startup.csproj" File="WebApiServer.Startup.csproj" ReplaceParameters="true">
+      <Folder Name="Utils" TargetFolderName="Utils">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BrowserSupport.cs">BrowserSupport.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

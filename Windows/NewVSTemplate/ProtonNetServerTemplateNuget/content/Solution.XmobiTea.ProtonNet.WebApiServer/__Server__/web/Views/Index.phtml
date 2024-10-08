@@ -1,0 +1,45 @@
+<header>
+    <h1>@renderViewData("title");</h1>
+</header>
+
+<nav>
+    <a href="#home">Home page</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact us</a>
+</nav>
+
+<div class="container">
+    <h2>Welcome to website build from ProtonNet WebApiServer for __Server__ project.</h2>
+    <p>Đây là một trang web đơn giản có giao diện tương tự với dự án mặc định của ASP.NET MVC 2. Bạn có thể sử dụng nó làm khung nền cho các dự án web của mình.</p>
+    
+    </br>
+    <p>Mời bạn có thể trải nghiệm thử các liên kết sau:</p>
+    <a href="/helloworld/hello">/helloworld/hello</a></br>
+    <a href="/helloworld/ping">/helloworld/ping</a></br>
+    <a href="/helloworld/getUTCDate">/helloworld/getUTCDate</a></br>
+    <a href="/helloworld/debugApplication">/helloworld/debugApplication</a></br></br>
+    <a href="/weather/getAllWeatherForecast">/weather/getAllWeatherForecast</a></br>
+    <a href="/weather/getWeatherForecast?sumary=Sweltering">/weather/getWeatherForecast?sumary=Sweltering</a></br>
+    <a href="/weather/getWeatherForecast/Warm">/weather/getWeatherForecast/Warm</a></br>
+    <a href="/weather/getWeatherForecastMiddleware">/weather/getWeatherForecastMiddleware</a></br>
+    </br>
+
+    <div class="grid">
+        <div class="grid-item">
+            <h3>Tính Năng 1</h3>
+            <p>Nội dung của tính năng 1. Đây là một phần thông tin ngắn gọn.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Tính Năng 2</h3>
+            <p>Nội dung của tính năng 2. Thêm mô tả chi tiết tại đây.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Tính Năng 3</h3>
+            <p>Nội dung của tính năng 3. Thông tin cần thiết cho người dùng.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    @renderPartial("footer");
+</footer>

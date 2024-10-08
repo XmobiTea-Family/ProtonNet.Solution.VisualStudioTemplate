@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="ProtonNetServerTemplate.95e68447-b8f0-4f58-b620-7abfcdf695ca" Version="1.0.0" Language="en-US" Publisher="XmobiTea" />
-        <DisplayName>Proton Net Server Template</DisplayName>
-        <Description xml:space="preserve">Proton Net Server template support for create Proton Net projects, EventHandler or RequestHandler classes.</Description>
+        <Identity Id="ProtonNetServerTemplate.95e68447-b8f0-4f58-b620-7abfcdf695ca" Version="1.0.0" Language="en-US" Publisher="XmobiTea Family" />
+        <DisplayName>ProtonNet Server (Old Template)</DisplayName>
+        <Description xml:space="preserve">ProtonNet Server template support for create ProtonNet projects, EventHandler or RequestHandler classes.
+Supports for old vstemplate</Description>
         <MoreInfo>https://xmobitea.com</MoreInfo>
         <License>LICENSE.txt</License>
         <Icon>ProtonNetServer.png</Icon>
         <PreviewImage>ProtonNetServer.png</PreviewImage>
-        <Tags>Proton Net Server template opensource open source projects event handler, request handler, webapicontroller</Tags>
+        <Tags>ProtonNet Server template opensource open source projects event handler, request handler, webapicontroller, solution for WebApiServer, SocketServer</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+        <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Community">
             <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Community">
+            <ProductArchitecture>arm64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+            <ProductArchitecture>arm64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+            <ProductArchitecture>arm64</ProductArchitecture>
         </InstallationTarget>
     </Installation>
     <Dependencies>
-        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.6,)" />
     </Dependencies>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
@@ -28,8 +44,8 @@
         <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Item.XmobiTea.ProtonNet.ModelRequestHandler.zip" />
         <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Item.XmobiTea.ProtonNet.RequestHandler.zip" />
         <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Item.XmobiTea.ProtonNet.WebApiController.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\XmobiTea.ProtonNet.SolutionSocketServer.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\XmobiTea.ProtonNet.SolutionWebApiServer.zip" />
         <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Item.XmobiTea.ProtonNet.WebApiHtml.zip" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Solution.XmobiTea.ProtonNet.SocketServer.zip" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Solution.XmobiTea.ProtonNet.WebApiServer.zip" />
     </Assets>
 </PackageManifest>

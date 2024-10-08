@@ -1,8 +1,8 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
     <DefaultName>Name</DefaultName>
-    <Name>Proton Net - EventHandler class</Name>
-    <Description>An EventHandler class for Proton Net SocketServer</Description>
+    <Name>ProtonNet - EventHandler class</Name>
+    <Description>An EventHandler class for ProtonNet SocketServer</Description>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>10</SortOrder>
     <Icon>icon.png</Icon>

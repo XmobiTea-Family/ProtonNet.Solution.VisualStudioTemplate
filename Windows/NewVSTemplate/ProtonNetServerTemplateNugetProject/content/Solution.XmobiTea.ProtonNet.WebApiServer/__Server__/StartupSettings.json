@@ -1,0 +1,39 @@
+﻿{
+  "Name": "__Server__",
+  "MaxPendingRequest": 10000,
+  "MaxSessionPendingRequest": 100,
+  "MaxSessionRequestPerSecond": 50,
+  "HttpServer": {
+    "Enable": true,
+    "Address": "0.0.0.0",
+    "Port": 22202,
+    "SessionConfig": {
+      "AcceptorBacklog": 1024,
+      "DualMode": false,
+      "KeepAlive": true,
+      "TcpKeepAliveTime": 10,
+      "TcpKeepAliveInterval": 10,
+      "TcpKeepAliveRetryCount": 10,
+      "NoDelay": true,
+      "ReuseAddress": false,
+      "ExclusiveAddressUse": false,
+      "ReceiveBufferLimit": 0,
+      "ReceiveBufferCapacity": 1024,
+      "SendBufferLimit": 0,
+      "SendBufferCapacity": 1024
+    },
+    "SslConfig": {
+      "Enable": false,
+      "Port": 4568,
+      "CertFilePath": "",
+      "CertPassword": null
+    }
+  },
+  "ThreadPoolSize": {
+    "OtherFiber": 2,
+    "ReceivedFiber": 12
+  },
+  "AuthToken": {
+    "Password": "__RandomAuthTokenGuid__"
+  }
+}

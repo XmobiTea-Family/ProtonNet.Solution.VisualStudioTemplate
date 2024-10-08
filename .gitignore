@@ -2,3 +2,14 @@ Windows/OldVSTemplate/Release/
 Windows/OldVSTemplate/ProtonNetServerTemplate/obj/
 Windows/OldVSTemplate/ProtonNetServerTemplate/bin/
 Windows/OldVSTemplate/ProtonNetServerTemplate/.vs/
+Windows/NewVSTemplate/obj/
+Windows/NewVSTemplate/.vs/
+Windows/NewVSTemplate/bin/
+Windows/NewVSTemplate/ProtonNetServerTemplateMarketplace/bin/
+Windows/NewVSTemplate/ProtonNetServerTemplateMarketplace/obj/
+Windows/NewVSTemplate/ProtonNetServerTemplateMarketplace/.vs/
+Windows/NewVSTemplate/ProtonNetServerTemplateNugetItem/bin/
+Windows/NewVSTemplate/ProtonNetServerTemplateNugetItem/obj/
+Windows/NewVSTemplate/ProtonNetServerTemplateNugetProject/obj/
+Windows/NewVSTemplate/ProtonNetServerTemplateNugetProject/bin/
+Windows/NewVSTemplate/ProtonNetServerTemplateNuget/obj/

@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "XmobiTea Family",
+    "classifications": [
+        "ProtonNet"
+    ],
+    "identity": "Item.XmobiTea.ProtonNet.ModelRequestHandler",
+    "name": "RequestHandler class with RequestModel",
+    "description": "A RequestHandler class with RequestModel for Both ProtonNet WebApiServer and ProtonNet SocketServer",
+    "shortName": "protonnet-modelrequesthandler-item",
+    "preferNameDirectory": true,
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "primaryOutputs": [
+        {
+            "path": "__Template__RequestHandler.cs"
+        }
+    ],
+    "postActions": [
+        {
+            "id": "openInEditor",
+            "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "description": "Opens RequestHandler file in the editor.",
+            "manualInstructions": [],
+            "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+            "args": {
+                "files": "0"
+            },
+            "continueOnError": true
+        }
+    ],
+    "sourceName": "__Template__RequestHandler",
+    "defaultName": "NameRequestHandler",
+    "symbols": {
+        "namespace": {
+            "type": "parameter",
+            "description": "Namespace for the generated code.",
+            "replaces": "__Namespace__"
+        },
+        "codePrefix": {
+            "type": "generated",
+            "generator": "regex",
+            "parameters": {
+                "source":"name",
+                "steps": [{
+                    "regex": "^(.*)RequestHandler[0-9]*$",
+                    "replacement": "$1"
+                }]
+            },
+            "replaces": "__CodePrefix__"
+        }
+    }
+}

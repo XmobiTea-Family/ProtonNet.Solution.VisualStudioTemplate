@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>__TargetFramework__</TargetFrameworks>
+		<ProtonNet>true</ProtonNet>
+		<ProjectCapabilities>$(ProjectCapabilities);ProtonNet</ProjectCapabilities>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="XmobiTea.ProtonNet.Server.WebApi" Version="__ProtonNetVersion__" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectCapability Include="ProtonNet" />
+
+		<None Update="log4net.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="StartupSettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="wwwroot\" />
+		<None Update="wwwroot\**\*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="web\" />
+		<Folder Include="web\Partials\" />
+		<Folder Include="web\Views\" />
+		<Folder Include="web\Layouts\" />
+		<None Update="web\**\*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
