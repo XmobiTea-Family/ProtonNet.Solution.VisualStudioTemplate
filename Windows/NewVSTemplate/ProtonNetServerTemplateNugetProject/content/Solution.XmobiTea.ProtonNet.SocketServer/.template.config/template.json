@@ -21,6 +21,13 @@
     ],
     "sources": [
         {
+            "source": "./.root/",
+            "target": "./../",
+            "include": [
+                "**/*"
+            ]
+        },
+        {
             "source": "./.vscode/",
             "target": "./../.vscode/",
             "include": [
@@ -43,6 +50,13 @@
         }
     ],
     "symbols": {
+        "ProtonNetVersion": {
+            "type": "parameter",
+            "datatype": "text",
+            "description": "Enter the ProtonNet version",
+            "defaultValue": "1.0.4",
+            "replaces": "__ProtonNetVersion__"
+        },
         "Framework": {
             "type": "parameter",
             "description": "The target framework for the project.",
@@ -100,13 +114,6 @@
             "type": "generated",
             "generator": "guid",
             "replaces": "__RandomAuthTokenGuid__"
-        },
-        "ProtonNetVersion": {
-            "type": "parameter",
-            "datatype": "text",
-            "description": "Enter the ProtonNet version",
-            "defaultValue": "1.0.4",
-            "replaces": "__ProtonNetVersion__"
         }
     },
     "primaryOutputs": [

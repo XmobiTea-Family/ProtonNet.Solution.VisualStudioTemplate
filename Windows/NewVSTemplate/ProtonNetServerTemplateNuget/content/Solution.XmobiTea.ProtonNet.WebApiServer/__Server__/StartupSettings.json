@@ -1,4 +1,5 @@
 ﻿{
+  "$schema": "https://schema.protonnetserver.com/1.0/StartupSettings/webapiserver/schema.json",
   "Name": "__Server__",
   "MaxPendingRequest": 10000,
   "MaxSessionPendingRequest": 100,
@@ -26,7 +27,7 @@
       "Enable": false,
       "Port": 4568,
       "CertFilePath": "",
-      "CertPassword": null
+      "CertPassword": ""
     }
   },
   "ThreadPoolSize": {

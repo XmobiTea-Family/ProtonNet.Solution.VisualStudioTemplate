@@ -19,6 +19,11 @@ header h1 {
 
 nav {
     background-color: #222;
+    margin: auto auto;
+    padding: 20px;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 0 0 1px 1px solid #ddd;
     overflow: hidden;
 }
 
@@ -87,25 +92,25 @@ footer p {
 }
 
 a {
-    color: #3498db; /* Màu sắc của liên kết */
-    text-decoration: none; /* Loại bỏ gạch chân mặc định */
-    font-weight: bold; /* Chữ in đậm */
-    padding: 10px 20px; /* Thêm khoảng cách bên trong */
-    border-radius: 5px; /* Bo góc */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi khi hover */
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a:hover {
-    background-color: #3498db; /* Thay đổi nền khi hover */
-    color: white; /* Thay đổi màu chữ khi hover */
-    text-decoration: none; /* Vẫn giữ việc loại bỏ gạch chân khi hover */
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
 }
 
 a:active {
-    background-color: #2980b9; /* Nền khi liên kết được nhấp vào */
+    background-color: #2980b9;
 }
 
 a:focus {
-    outline: none; /* Loại bỏ viền focus mặc định */
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Thêm hiệu ứng bóng khi focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }

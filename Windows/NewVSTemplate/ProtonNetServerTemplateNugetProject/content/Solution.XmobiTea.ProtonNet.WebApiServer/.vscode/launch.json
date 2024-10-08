@@ -1,20 +1,18 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+    "version": "0.2.0",
+    "configurations": [
         {
-            "label": "build__Server__",
-            "type": "process",
-            "command": "dotnet",
-            "args": [
-                "build",
-                "${workspaceFolder}/__Server__/__Server__.Startup/__Server__.Startup.csproj"
-            ],
-            "problemMatcher": "$msCompile",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "Generated task for building the __Server__ solution."
+            "name": "Launch __Server__.Startup (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build__Server__",
+            "program": "__Server__.Startup",
+            "args": [],
+            "cwd": "${workspaceFolder}/__Server__/__Server__.Startup/bin/Debug/__TargetFramework__",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "justMyCode": true,
+            "internalConsoleOptions": "openOnSessionStart"
         }
     ]
 }

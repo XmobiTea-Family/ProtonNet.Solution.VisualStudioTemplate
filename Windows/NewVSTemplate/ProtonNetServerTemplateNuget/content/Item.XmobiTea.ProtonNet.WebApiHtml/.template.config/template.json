@@ -15,7 +15,7 @@
     },
     "primaryOutputs": [
         {
-            "path": "__Template__.cs"
+            "path": "__Template__.phtml"
         }
     ],
     "postActions": [

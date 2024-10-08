@@ -2,32 +2,32 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 	<Metadata>
 		<Identity Id="ProtonNetServerTemplate.95e68447-b8f0-4f58-b620-7abfcdf695ca" Version="1.0.0" Language="en-US" Publisher="XmobiTea Family" />
-		<DisplayName>ProtonNet Server Template</DisplayName>
+		<DisplayName>ProtonNet Template</DisplayName>
 		<Description xml:space="preserve">ProtonNet Server template support for create ProtonNet projects, EventHandler or RequestHandler classes.
 Supports for old vstemplate</Description>
-		<MoreInfo>https://xmobitea.com</MoreInfo>
+		<MoreInfo>https://protonnetserver.com</MoreInfo>
 		<License>LICENSE.txt</License>
-		<Icon>ProtonNetServer.png</Icon>
-		<PreviewImage>ProtonNetServer.png</PreviewImage>
+		<Icon>icon.png</Icon>
+		<PreviewImage>icon.png</PreviewImage>
 		<Tags>ProtonNet Server template opensource open source projects event handler, request handler, webapicontroller, solution for WebApiServer, SocketServer</Tags>
 	</Metadata>
 	<Installation>
-		<InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Community">
+		<InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Community">
 			<ProductArchitecture>amd64</ProductArchitecture>
 		</InstallationTarget>
-		<InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+		<InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Pro">
 			<ProductArchitecture>amd64</ProductArchitecture>
 		</InstallationTarget>
-		<InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+		<InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
 			<ProductArchitecture>amd64</ProductArchitecture>
 		</InstallationTarget>
-		<InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Community">
+		<InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Community">
 			<ProductArchitecture>arm64</ProductArchitecture>
 		</InstallationTarget>
-		<InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+		<InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Pro">
 			<ProductArchitecture>arm64</ProductArchitecture>
 		</InstallationTarget>
-		<InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+		<InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
 			<ProductArchitecture>arm64</ProductArchitecture>
 		</InstallationTarget>
 	</Installation>

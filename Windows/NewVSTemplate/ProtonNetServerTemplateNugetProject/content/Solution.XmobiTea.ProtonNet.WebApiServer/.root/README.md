@@ -11,7 +11,7 @@
 1. Open Visual Studio Code, select `File/Open Folder...` and choose the folder containing the project.
 2. Click `Run/Start Debugging (F5)` or select `Run and Debug` or `View/Run`, then click on the `Launch __Server__.Startup (Debug)` button.
 
-#### For **Visual Studio 2019** or later:
+#### For **Visual Studio 2022** or later:
 1. Open the `__Server__.sln` file in Visual Studio.
 2. In `Solution Explorer`, right-click the **__Server__.Startup** project and select `Set as Startup Project`.
 3. Click `Debug/Start Debugging (F5)` to start debugging.
@@ -29,7 +29,7 @@ Use **ProtonNet Control** to deploy the **__Server__** application:
 3. **Edit the `ProtonNetServerSettings.json` file**:
     - Change the `"TargetFramework"` field: Set it to `"__TargetFramework__"`.
     - Change the `"TargetRuntime"` field: Choose the runtime that matches your server.
-    - **Add configuration for `__Server__`** as follows:
+    - **Add configuration for `__Server__`** and final file `ProtonNetServerSettings.json` should look like:
      ```json
     {
         "TargetFramework": "__TargetFramework__",
@@ -63,7 +63,7 @@ Use **ProtonNet Control** to deploy the **__Server__** application:
      ```
     - **For Linux or macOS**: Open Terminal and type:
      ```
-     control.sh install __Server__
+     ./control.sh install __Server__
      ```
 
 6. **Start the service**:

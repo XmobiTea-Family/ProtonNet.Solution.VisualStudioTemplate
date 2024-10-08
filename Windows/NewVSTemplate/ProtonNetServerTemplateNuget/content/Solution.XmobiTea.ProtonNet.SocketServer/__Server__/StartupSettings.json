@@ -1,4 +1,5 @@
 ﻿{
+  "$schema": "https://schema.protonnetserver.com/1.0/StartupSettings/socketserver/schema.json",
   "Name": "__Server__",
   "MaxSession": 10000,
   "MaxPendingRequest": 10000,
@@ -32,7 +33,7 @@
       "Enable": false,
       "Port": 32203,
       "CertFilePath": "",
-      "CertPassword": null
+      "CertPassword": ""
     }
   },
   "UdpServer": {
@@ -72,7 +73,7 @@
       "Enable": false,
       "Port": 52203,
       "CertFilePath": "",
-      "CertPassword": null
+      "CertPassword": ""
     }
   },
   "ThreadPoolSize": {
