@@ -18,7 +18,7 @@ ARG SERVER TARGET_RUNTIME
 WORKDIR /src
 
 # Copy source code into the container
-COPY ./${SERVER}/${SERVER}/ .
+COPY ./${SERVER}/${SERVER} .
 
 # Build the project in Release mode and publish it to the /app/publish folder
 RUN dotnet publish -c Release --os linux -f ${TARGET_RUNTIME} -o ./app/publish

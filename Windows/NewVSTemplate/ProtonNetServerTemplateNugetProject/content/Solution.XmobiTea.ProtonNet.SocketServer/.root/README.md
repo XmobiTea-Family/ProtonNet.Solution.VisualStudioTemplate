@@ -110,7 +110,7 @@ You can use the `Dockerfile` in this project to build a Docker `image` by runnin
 
 After the build completes successfully, you can run a Docker `container` (make sure to adjust the ports as needed) by running the following command:
 ```
-    docker run __ServerLowercase__ -p 32202:32202 -p 30802:30802 -p 42202:42202/udp -p 52202:52202 -p 50802:50802
+    docker run -p 32202:32202 -p 30802:30802 -p 42202:42202/udp -p 52202:52202 -p 50802:50802 __ServerLowercase__
 ```
 
 - `-p 32202:32202`: Maps port 32202 from the container to the host port 32202. (default tcp port in `StartupSettings.json`)

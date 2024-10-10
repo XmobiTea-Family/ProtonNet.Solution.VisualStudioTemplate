@@ -15,7 +15,7 @@ ARG SERVER TARGET_RUNTIME
 WORKDIR /src
 
 # Copy source code into the container
-COPY ./${SERVER}/${SERVER}/ .
+COPY ./${SERVER}/${SERVER} .
 
 # Build the project in Release mode and publish it to the /app/publish folder
 RUN dotnet publish -c Release --os linux -f ${TARGET_RUNTIME} -o ./app/publish
@@ -36,6 +36,15 @@ ARG HTTP_PORT HTTPS_PORT
 WORKDIR /protonnetcontrol
 
 COPY --from=build-sdk /src/app/publish ./applications/${SERVER}
+
+RUN mkdir -p ./applications/${SERVER}/wwwroot
+RUN mkdir -p ./applications/${SERVER}/web
+
+COPY ./${SERVER}/${SERVER}/wwwroot ./applications/${SERVER}/wwwroot
+COPY ./${SERVER}/${SERVER}/web ./applications/${SERVER}/web
+
+RUN chmod +x ./applications/${SERVER}/wwwroot
+RUN chmod +x ./applications/${SERVER}/web
 
 # Create ProtonNetServerSettings.json
 RUN sed -i "s|__dockerServer__|${SERVER}|g" ./ProtonNetServerSettings.json && \

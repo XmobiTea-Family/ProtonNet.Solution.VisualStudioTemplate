@@ -12,7 +12,7 @@ namespace __Server__.Controllers
         private HttpResponse Index()
         {
             return this.View("Index", "_Layout", new ViewData()
-                .SetData("Title", "Proton WebApiServer"));
+                .SetData("title", "[ProtonNet] __Server__"));
         }
 
     }

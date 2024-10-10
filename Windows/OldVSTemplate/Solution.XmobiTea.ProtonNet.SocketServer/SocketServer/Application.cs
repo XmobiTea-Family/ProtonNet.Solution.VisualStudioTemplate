@@ -15,7 +15,7 @@ namespace $safeprojectname$
         {
             this.logger = LogManager.GetLogger(this);
 
-            this.logger.Info("Constructor Application called");
+            this.logger.Info("Application created successfully.");
 
         }
 

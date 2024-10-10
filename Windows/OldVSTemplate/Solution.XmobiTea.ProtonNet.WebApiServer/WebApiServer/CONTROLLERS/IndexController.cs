@@ -12,7 +12,7 @@ namespace $safeprojectname$.Controllers
         private HttpResponse Index()
         {
             return this.View("Index", "_Layout", new ViewData()
-                .SetData("Title", "Proton WebApiServer"));
+                .SetData("title", "[ProtonNet] __Server__"));
         }
 
     }
