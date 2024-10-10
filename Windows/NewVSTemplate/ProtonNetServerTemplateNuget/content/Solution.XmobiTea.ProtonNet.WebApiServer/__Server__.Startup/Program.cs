@@ -1,6 +1,7 @@
 ﻿using __Server__.Startup.Utils;
 using System;
 using System.Reflection;
+using XmobiTea.Logging;
 using XmobiTea.ProtonNet.Control.Helper;
 using XmobiTea.ProtonNet.Server.WebApi;
 
@@ -26,6 +27,7 @@ namespace __Server__.Startup
             var server = serverEntry.GetServer();
             server.Start();
 
+            LogManager.GetLogger<Program>().Info($"open browser at link http://127.0.0.1:{startupSettings.HttpServer.Port}");
             BrowserSupport.Open($"http://127.0.0.1:{startupSettings.HttpServer.Port}");
 
             Console.ReadLine();

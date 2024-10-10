@@ -31,7 +31,7 @@
     },
     "SslConfig": {
       "Enable": false,
-      "Port": 32203,
+      "Port": 30802,
       "CertFilePath": "",
       "CertPassword": ""
     }
@@ -71,7 +71,7 @@
     },
     "SslConfig": {
       "Enable": false,
-      "Port": 52203,
+      "Port": 50802,
       "CertFilePath": "",
       "CertPassword": ""
     }

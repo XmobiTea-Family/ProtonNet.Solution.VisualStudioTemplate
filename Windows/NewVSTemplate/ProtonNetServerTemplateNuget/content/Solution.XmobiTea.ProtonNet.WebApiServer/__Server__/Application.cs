@@ -15,8 +15,7 @@ namespace __Server__
         {
             this.logger = LogManager.GetLogger(this);
 
-            this.logger.Info("Constructor Application called");
-            this.logger.Info("open browser at link http://127.0.0.1:22202/helloworld/hello");
+            this.logger.Info("Application created successfully.");
 
         }
 

@@ -20,6 +20,8 @@
 
 ### How to deploy to production:
 ## [Deploy](https://protonnetserver.com/deploy)
+
+## I. Without Docker
 Use **ProtonNet Control** to deploy the **__Server__** application:
 
 1. Download the latest version of **ProtonNet Control** here: [Download ProtonNet Control](https://protonnetserver.com/download)
@@ -41,7 +43,7 @@ Use **ProtonNet Control** to deploy the **__Server__** application:
             {
                 "Name": "__Server__",
                 "Enable": true,
-                "ServerType": "Socket",
+                "ServerType": "__ServerType__",
                 "BinPath": "__Server__",
                 "AssemblyName": "__Server__",
                 "StartupSettingsFilePath": "StartupSettings.json",
@@ -76,7 +78,7 @@ Use **ProtonNet Control** to deploy the **__Server__** application:
      control.sh start __Server__
      ```
 
-## Status and Logs
+### Status and Logs
 1. **Check service status**:
     - **For Windows**: Type:
      ```
@@ -96,6 +98,25 @@ Use **ProtonNet Control** to deploy the **__Server__** application:
      ```
      control.sh log __Server__
      ```
+
+---
+
+## II. With Docker (for .NET Core projects)
+
+You can use the `Dockerfile` in this project to build a Docker `image` by running the following command:
+```
+    docker build -t __ServerLowercase__ ./
+```
+
+After the build completes successfully, you can run a Docker `container` (make sure to adjust the ports as needed) by running the following command:
+```
+    docker run __ServerLowercase__ -p 22202:22202 -p 20802:20802
+```
+
+- `-p 22202:22202`: Maps port 22202 from the container to the host port 22202. (default http port in `StartupSettings.json`)
+- `-p 20802:20802`: Maps port 20802 from the container to the host port 20802. (default https port in `StartupSettings.json`)
+
+Ensure that these ports do not conflict with other services running on your machine.
 
 ---
 

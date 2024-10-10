@@ -20,6 +20,8 @@
 
 ### How to deploy to production:
 ## [Deploy](https://protonnetserver.com/deploy)
+
+## I. Without Docker
 Use **ProtonNet Control** to deploy the **__Server__** application:
 
 1. Download the latest version of **ProtonNet Control** here: [Download ProtonNet Control](https://protonnetserver.com/download)
@@ -41,7 +43,7 @@ Use **ProtonNet Control** to deploy the **__Server__** application:
             {
                 "Name": "__Server__",
                 "Enable": true,
-                "ServerType": "Socket",
+                "ServerType": "__ServerType__",
                 "BinPath": "__Server__",
                 "AssemblyName": "__Server__",
                 "StartupSettingsFilePath": "StartupSettings.json",
@@ -76,7 +78,7 @@ Use **ProtonNet Control** to deploy the **__Server__** application:
      control.sh start __Server__
      ```
 
-## Status and Logs
+### Status and Logs
 1. **Check service status**:
     - **For Windows**: Type:
      ```
@@ -96,6 +98,28 @@ Use **ProtonNet Control** to deploy the **__Server__** application:
      ```
      control.sh log __Server__
      ```
+
+---
+
+## II. With Docker (for .NET Core projects)
+
+You can use the `Dockerfile` in this project to build a Docker `image` by running the following command:
+```
+    docker build -t __ServerLowercase__ ./
+```
+
+After the build completes successfully, you can run a Docker `container` (make sure to adjust the ports as needed) by running the following command:
+```
+    docker run __ServerLowercase__ -p 32202:32202 -p 30802:30802 -p 42202:42202/udp -p 52202:52202 -p 50802:50802
+```
+
+- `-p 32202:32202`: Maps port 32202 from the container to the host port 32202. (default tcp port in `StartupSettings.json`)
+- `-p 30802:30802`: Maps port 30802 from the container to the host port 30802. (default ssl port in `StartupSettings.json`)
+- `-p 42202:42202/udp`: Maps udp port 42202 from the container to the host udp port 42202. (default udp port in `StartupSettings.json`)
+- `-p 52202:52202`: Maps port 52202 from the container to the host port 52202. (default ws port in `StartupSettings.json`)
+- `-p 50802:50802`: Maps port 32202 from the container to the host port 32202. (default wss port in `StartupSettings.json`)
+
+Ensure that these ports do not conflict with other services running on your machine.
 
 ---
 

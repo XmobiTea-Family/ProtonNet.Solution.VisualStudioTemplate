@@ -50,6 +50,36 @@
         }
     ],
     "symbols": {
+        "ServerNoSpecialChar": {
+            "type": "generated",
+            "generator": "regex",
+            "parameters": {
+                "source": "name",
+                "steps": [
+                    {
+                        "regex": "[._]",
+                        "replacement": ""
+                    }
+                ]
+            }
+        },
+        "ServerLowercase": {
+            "type": "generated",
+            "generator": "casing",
+            "parameters": {
+                "source": "ServerNoSpecialChar",
+                "toLower": true
+            },
+            "replaces": "__ServerLowercase__"
+        },
+        "ServerType": {
+            "type": "generated",
+            "generator": "constant",
+            "parameters": {
+                "value": "WebApi"
+            },
+            "replaces": "__ServerType__"
+        },
         "ProtonNetVersion": {
             "type": "parameter",
             "datatype": "text",
