@@ -1,0 +1,15 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>Name</DefaultName>
+    <Name>ProtonNet - EventHandler class with EventModel</Name>
+    <Description>An EventHandler class with EventModel for ProtonNet SocketServer</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>icon.png</Icon>
+    <PreviewImage>icon.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="" TargetFileName="$fileinputname$EventHandler.cs" ReplaceParameters="true">TemplateEventHandler.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

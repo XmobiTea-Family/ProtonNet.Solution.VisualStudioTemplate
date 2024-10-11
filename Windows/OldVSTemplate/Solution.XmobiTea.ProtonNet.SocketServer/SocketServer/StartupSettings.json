@@ -1,0 +1,85 @@
+﻿{
+  "Name": "$safeprojectname$",
+  "MaxSession": 10000,
+  "MaxPendingRequest": 10000,
+  "MaxSessionPendingRequest": 100,
+  "MaxSessionRequestPerSecond": 50,
+  "MaxUdpSessionRequestPerUser": 1,
+  "MaxTcpSessionRequestPerUser": 1,
+  "MaxWsSessionRequestPerUser": 1,
+  "HandshakeTimeoutInSeconds": 30,
+  "IdleTimeoutInSeconds": 60,
+  "TcpServer": {
+    "Enable": true,
+    "Address": "0.0.0.0",
+    "Port": 32202,
+    "SessionConfig": {
+      "AcceptorBacklog": 1024,
+      "DualMode": false,
+      "KeepAlive": true,
+      "TcpKeepAliveTime": 10,
+      "TcpKeepAliveInterval": 10,
+      "TcpKeepAliveRetryCount": 10,
+      "NoDelay": true,
+      "ReuseAddress": false,
+      "ExclusiveAddressUse": false,
+      "ReceiveBufferLimit": 0,
+      "ReceiveBufferCapacity": 1024,
+      "SendBufferLimit": 0,
+      "SendBufferCapacity": 1024
+    },
+    "SslConfig": {
+      "Enable": false,
+      "Port": 32203,
+      "CertFilePath": "",
+      "CertPassword": null
+    }
+  },
+  "UdpServer": {
+    "Enable": true,
+    "Address": "0.0.0.0",
+    "Port": 42202,
+    "SessionConfig": {
+      "DualMode": false,
+      "ReuseAddress": false,
+      "ExclusiveAddressUse": false,
+      "ReceiveBufferLimit": 0,
+      "ReceiveBufferCapacity": 1024,
+      "SendBufferLimit": 0
+    }
+  },
+  "WebSocketServer": {
+    "Enable": true,
+    "Address": "0.0.0.0",
+    "Port": 52202,
+    "MaxFrameSize": 1024,
+    "SessionConfig": {
+      "AcceptorBacklog": 1024,
+      "DualMode": false,
+      "KeepAlive": true,
+      "TcpKeepAliveTime": 10,
+      "TcpKeepAliveInterval": 10,
+      "TcpKeepAliveRetryCount": 10,
+      "NoDelay": true,
+      "ReuseAddress": false,
+      "ExclusiveAddressUse": false,
+      "ReceiveBufferLimit": 0,
+      "ReceiveBufferCapacity": 1024,
+      "SendBufferLimit": 0,
+      "SendBufferCapacity": 1024
+    },
+    "SslConfig": {
+      "Enable": false,
+      "Port": 52203,
+      "CertFilePath": "",
+      "CertPassword": null
+    }
+  },
+  "ThreadPoolSize": {
+    "OtherFiber": 2,
+    "ReceivedFiber": 12
+  },
+  "AuthToken": {
+    "Password": "$guid$"
+  }
+}

@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "XmobiTea Family",
+    "classifications": [
+        "ProtonNet"
+    ],
+    "identity": "Item.XmobiTea.ProtonNet.ModelEventHandler",
+    "name": "EventHandler class with EventModel",
+    "description": "An EventHandler class for ProtonNet SocketServer",
+    "shortName": "protonnet-modeleventhandler-item",
+    "preferNameDirectory": true,
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "primaryOutputs": [
+        {
+            "path": "__Template__EventHandler.cs"
+        }
+    ],
+    "postActions": [
+        {
+            "id": "openInEditor",
+            "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "description": "Opens EventHandler file in the editor.",
+            "manualInstructions": [],
+            "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+            "args": {
+                "files": "0"
+            },
+            "continueOnError": true
+        }
+    ],
+    "sourceName": "__Template__EventHandler",
+    "defaultName": "NameEventHandler",
+    "symbols": {
+        "namespace": {
+            "type": "parameter",
+            "description": "Namespace for the generated code.",
+            "replaces": "__Namespace__"
+        },
+        "codePrefix": {
+            "type": "generated",
+            "generator": "regex",
+            "parameters": {
+                "source":"name",
+                "steps": [{
+                    "regex": "^(.*)EventHandler[0-9]*$",
+                    "replacement": "$1"
+                }]
+            },
+            "replaces": "__CodePrefix__"
+        }
+    }
+}

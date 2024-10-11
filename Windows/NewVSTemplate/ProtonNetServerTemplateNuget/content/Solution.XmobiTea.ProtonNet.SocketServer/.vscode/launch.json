@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch __Server__.Startup (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build__Server__",
+            "program": "__Server__.Startup",
+            "args": [],
+            "cwd": "${workspaceFolder}/__Server__/__Server__.Startup/bin/Debug/__TargetFramework__",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "justMyCode": true,
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}

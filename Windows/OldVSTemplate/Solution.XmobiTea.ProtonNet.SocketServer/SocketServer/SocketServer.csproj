@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;net6.0;net8.0;netstandard2.0;netstandard2.1;net46;net461;net462;net47;net471;net472;net48;net481;</TargetFrameworks>
+		<ProtonNet>true</ProtonNet>
+		<ProjectCapabilities>$(ProjectCapabilities);ProtonNet</ProjectCapabilities>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="XmobiTea.ProtonNet.Server.Socket" Version="1.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectCapability Include="ProtonNet" />
+		
+		<None Update="log4net.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="StartupSettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>

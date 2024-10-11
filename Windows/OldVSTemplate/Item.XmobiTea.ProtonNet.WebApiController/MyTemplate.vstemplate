@@ -1,0 +1,15 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>Name</DefaultName>
+    <Name>ProtonNet - WebApiController class</Name>
+    <Description>A WebApiController class for ProtonNet WebApiServer</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>icon.png</Icon>
+    <PreviewImage>icon.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="" TargetFileName="$fileinputname$Controller.cs" ReplaceParameters="true">TemplateController.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,15 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>Name</DefaultName>
+    <Name>ProtonNet - WebApiHtml file</Name>
+    <Description>A WebApiHtml file to render view, partial or layout for ProtonNet WebApiServer</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>icon.png</Icon>
+    <PreviewImage>icon.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.phtml" ReplaceParameters="true">Template.phtml</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

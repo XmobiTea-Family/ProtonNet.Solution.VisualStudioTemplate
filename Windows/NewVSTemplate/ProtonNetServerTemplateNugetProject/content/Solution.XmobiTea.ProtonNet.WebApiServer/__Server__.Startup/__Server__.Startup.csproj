@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>exe</OutputType>
+		<TargetFrameworks>__TargetFramework__</TargetFrameworks>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\__Server__\__Server__.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="XmobiTea.ProtonNet.Control.Helper" Version="__ProtonNetVersion__" />
+	</ItemGroup>
+
+</Project>
