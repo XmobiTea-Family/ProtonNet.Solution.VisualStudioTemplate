@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="ProtonNetServerTemplate.95e68447-b8f0-4f58-b620-7abfcdf695ca" Version="1.0.1" Language="en-US" Publisher="XmobiTea Family" />
+        <Identity Id="ProtonNetServerTemplate.95e68447-b8f0-4f58-b620-7abfcdf695ca" Version="1.0.2" Language="en-US" Publisher="XmobiTea Family" />
         <DisplayName>ProtonNet Template</DisplayName>
         <Description xml:space="preserve">ProtonNet Server template support for create ProtonNet projects, EventHandler or RequestHandler classes.
 Supports for old vstemplate</Description>
