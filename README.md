@@ -4,23 +4,23 @@
 ![License](https://img.shields.io/github/license/XmobiTea-Family/ProtonNet.Solution)
 [![GitHub star chart](https://img.shields.io/github/stars/XmobiTea-Family/ProtonNet.Solution?style=social)](https://star-history.com/#XmobiTea-Family/ProtonNet.Solution)
 
-# ProtonNet Template for Visual Studio Code
+# ProtonNet Template for Visual Studio
 
-Welcome to the **ProtonNet** template for Visual Studio Code!  
+Welcome to the **ProtonNet** template for Visual Studio 2022!  
 This tool is designed to streamline and enhance the development process for projects within the [ProtonNet Server](https://protonnetserver.com) ecosystem.
 
 ## I. Installation
 
-You can install the ProtonNet Template for Visual Studio Code in two ways:
+You can install the ProtonNet Template for Visual Studio in two ways:
 
 ### 1. Install via Marketplace Extensions
   1. Open `Extension/Manage Extensions`.
   2. In the *Browse* section, type `ProtonNet`, then hit Enter.
   3. Press `Install`.
 
-![alt text](images/image.png)
+![alt text](https://raw.githubusercontent.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/master/images/image.png)
 
-*Note*: You might need to restart Visual Studio Code to complete the installation process.
+*Note*: You might need to restart Visual Studio to complete the installation process.
 
 ---
 
@@ -32,26 +32,26 @@ You can install the ProtonNet Template for Visual Studio Code in two ways:
 
 ## II. How to Use
 
-1. Open Visual Studio Code and create a new project.
+1. Open Visual Studio 2022 and create a new project.
 2. Choose `ProtonNet` under `Project Type`, as shown below:
 
-![alt text](images/image-2.png)
+![alt text](https://raw.githubusercontent.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/master/images/image-2.png)
 
 3. Select the project type you want to create. In this example, we'll use the project name `SocketServerExample` to create a **SocketServer** solution. You can name the project as you prefer and click `Next`. In this example, we'll use `.NET 8.0` and **ProtonNetVersion 1.0.4**.
 
-![alt text](images/image-3.png)
+![alt text](https://raw.githubusercontent.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/master/images/image-3.png)
 
 4. After the project is created, right-click the `SocketServerExample.Startup` and choose `Set as Startup Project`.
 
-![alt text](images/image-4.png)
+![alt text](https://raw.githubusercontent.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/master/images/image-4.png)
 
 5. Press `F5` or run `SocketServerExample.Startup` to start debugging.
 
-![alt text](images/image-5.png)
+![alt text](https://raw.githubusercontent.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/master/images/image-5.png)
 
 6. You should see a successful run, like this:
 
-![alt text](images/image-6.png)
+![alt text](https://raw.githubusercontent.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/master/images/image-6.png)
 
 ---
 
@@ -60,7 +60,7 @@ You can install the ProtonNet Template for Visual Studio Code in two ways:
 1. Navigate to the `RequestHandlers` folder in your project.
 2. Add a new item and implement your logic in the `Handle()` method.
 
-![alt text](images/image-7.png)
+![alt text](https://raw.githubusercontent.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/master/images/image-7.png)
 
 Now you're ready to process requests with your custom handler!
 
@@ -68,7 +68,7 @@ Now you're ready to process requests with your custom handler!
 
 ## III. Release Notes
 
-### Version 1.0.2
+### Version 1.0.1
 
 - **ProtonNet Tool Support**:
   - Create **SocketServer** projects within the [ProtonNet Server](https://protonnetserver.com) ecosystem.
