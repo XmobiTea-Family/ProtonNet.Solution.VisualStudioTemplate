@@ -4,65 +4,84 @@
 ![License](https://img.shields.io/github/license/XmobiTea-Family/ProtonNet.Solution)
 [![GitHub star chart](https://img.shields.io/github/stars/XmobiTea-Family/ProtonNet.Solution?style=social)](https://star-history.com/#XmobiTea-Family/ProtonNet.Solution)
 
-# Proton Net Visual Studio Template
-![GitHub release](https://img.shields.io/github/release/XmobiTea-Family/ProtonNet.VisualStudioTemplate.svg)
+# ProtonNet Template for Visual Studio Code
 
-## Introduction
-This repository helps you quickly set up:
-- Proton Net Server projects.
-- Proton Net handler classes.
+Welcome to the **ProtonNet** template for Visual Studio Code!  
+This tool is designed to streamline and enhance the development process for projects within the [ProtonNet Server](https://protonnetserver.com) ecosystem.
 
-## How to Setup
-1. Download the latest release from the [Proton Net Visual Studio Template Releases](https://github.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/releases).
-2. Extract the release, and you will find the following:
+## I. Installation
 
-    ### I. ItemTemplates:
-        - `Item.XmobiTea.ProtonNet.EventHandler.[VERSION].zip`
-        - `Item.XmobiTea.ProtonNet.ModelEventHandler.[VERSION].zip`
-        - `Item.XmobiTea.ProtonNet.ModelRequestHandler.[VERSION].zip`
-        - `Item.XmobiTea.ProtonNet.RequestHandler.[VERSION].zip`
-        - `Item.XmobiTea.ProtonNet.WebApiController.[VERSION].zip`
+You can install the ProtonNet Template for Visual Studio Code in two ways:
 
-    ### II. ProjectTemplates:
-        - `XmobiTea.ProtonNet.SolutionSocketServer.[VERSION].zip`
-        - `XmobiTea.ProtonNet.SolutionWebApiServer.[VERSION].zip`
+### 1. Install via Marketplace Extensions
+  1. Open `Extension/Manage Extensions`.
+  2. In the *Browse* section, type `ProtonNet`, then hit Enter.
+  3. Press `Install`.
 
-3. Copy the templates to the appropriate Visual Studio template folders:
+![alt text](images/image.png)
 
-   ![alt text](image/templatesFolder.png)
+*Note*: You might need to restart Visual Studio Code to complete the installation process.
 
-    #### a. For Windows:
-        1. **Item Templates:**
-            - Navigate to `C:\Users\[YOUR USER]\Documents\Visual Studio [VERSION]\Templates\ItemTemplates`
-            - If there are older versions of these templates, remove them.
-            - Copy the Item Templates from section I into this folder.
+---
 
-        2. **Project Templates:**
-            - Navigate to `C:\Users\[YOUR USER]\Documents\Visual Studio [VERSION]\Templates\ProjectTemplates`
-            - If there are older versions of these templates, remove them.
-            - Copy the Project Templates from section II into this folder.
+### 2. Install from VSIX
+  1. Download the latest release from [ProtonNet Template for Visual Studio](https://github.com/XmobiTea-Family/ProtonNet.Solution.VisualStudioTemplate/releases).
+  2. Run the downloaded `.vsix` file (e.g., `protonnetvs-1.0.1.vsix`) to install the extension.
 
-    #### b. For macOS:
-        1. **Item Templates:**
-            - Navigate to `~/Documents/Visual Studio [VERSION]/Templates/ItemTemplates/`
-            - If there are older versions of these templates, remove them.
-            - Copy the Item Templates from section I into this folder.
+---
 
-        2. **Project Templates:**
-            - Navigate to `~/Documents/Visual Studio [VERSION]/Templates/ProjectTemplates/`
-            - If there are older versions of these templates, remove them.
-            - Copy the Project Templates from section II into this folder.
+## II. How to Use
 
-4. After copying, your folder structure should look like this:
-   ![alt text](image/itemTemplatesFolder.png)
-   ![alt text](image/projectTemplatesFolder.png)
+1. Open Visual Studio Code and create a new project.
+2. Choose `ProtonNet` under `Project Type`, as shown below:
 
-5. Restart Visual Studio.
-   - When creating a new project, filter by `Proton Net`. If the templates appear as shown in the image below, the Project Templates have been successfully installed.
-   ![alt text](image/createNewProject.png)
+![alt text](images/image-2.png)
 
-   - When adding a new class, if the templates appear as shown below, the Item Templates have been successfully installed.
-   ![alt text](image/addNewItem.png)
+3. Select the project type you want to create. In this example, we'll use the project name `SocketServerExample` to create a **SocketServer** solution. You can name the project as you prefer and click `Next`. In this example, we'll use `.NET 8.0` and **ProtonNetVersion 1.0.4**.
 
-## Support
-If you run into any issues while setting up this Visual Studio Template, feel free to contact us. We're happy to assist when available. You can reach us at `changx.develop@gmail.com`. Please provide details about the issue and some contact information so we can follow up with you.
+![alt text](images/image-3.png)
+
+4. After the project is created, right-click the `SocketServerExample.Startup` and choose `Set as Startup Project`.
+
+![alt text](images/image-4.png)
+
+5. Press `F5` or run `SocketServerExample.Startup` to start debugging.
+
+![alt text](images/image-5.png)
+
+6. You should see a successful run, like this:
+
+![alt text](images/image-6.png)
+
+---
+
+### How to Create a RequestHandler
+
+1. Navigate to the `RequestHandlers` folder in your project.
+2. Add a new item and implement your logic in the `Handle()` method.
+
+![alt text](images/image-7.png)
+
+Now you're ready to process requests with your custom handler!
+
+---
+
+## III. Release Notes
+
+### Version 1.0.2
+
+- **ProtonNet Tool Support**:
+  - Create **SocketServer** projects within the [ProtonNet Server](https://protonnetserver.com) ecosystem.
+  - Create **WebApiServer** projects within the [ProtonNet Server](https://protonnetserver.com) ecosystem.
+
+- **File Generators**:
+  - Easily generate **WebApiController** files.
+  - Generate **EventHandler** files to handle application events.
+  - Generate **RequestHandler** files for managing and processing requests.
+  - Generate **WebApiHtml** files to build web API interfaces.
+
+## IV. Support
+
+For support or to share your feedback, feel free to join the discussion on [ProtonNet Discussions](https://discussions.protonnetserver.com) or contact me at changx.develop@gmail.com.
+
+**Enjoy your development with ProtonNet!**
